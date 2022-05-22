@@ -17,7 +17,7 @@
   },
   "keywords": ["unicode"],
   "author": "Ravi S. Rāmphal <rramphal@gmail.com> (https://rramphal.com/)",
-  "license": "MIT",
+  "license": "Unicode-DFS-2016",
   "bugs": {
     "url": "https://github.com/rramphal/unicode-character-code-names/issues"
   },
