@@ -1,0 +1,25 @@
+{
+  "name": "unicode-character-code-names",
+  "version": "1.0.0",
+  "description": "This script generates a JSON files that that map Unicode character codes to their names. If a Unicode 1.0 name is present, it is appended after a slash. There is a minified version which puts all the data on a single line.",
+  "main": "src/generate.js",
+  "scripts": {
+    "build": "npm run download && npm run generate && npm run validate && npm run validate-min",
+    "download": "wget -O src/UnicodeData.txt http://unicode.org/Public/UNIDATA/UnicodeData.txt",
+    "generate": "node src/generate.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "cat dist/unicode-names.json | jq '.'",
+    "validate-min": "cat dist/unicode-names.min.json | jq '.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rramphal/unicode-character-code-names.git"
+  },
+  "keywords": ["unicode"],
+  "author": "Ravi S. Rāmphal <rramphal@gmail.com> (https://rramphal.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rramphal/unicode-character-code-names/issues"
+  },
+  "homepage": "https://github.com/rramphal/unicode-character-code-names#readme"
+}
